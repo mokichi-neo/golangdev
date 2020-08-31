@@ -9,6 +9,6 @@ run:
 stop:
 	docker stop golang_dev
 
-clean:
+clean:stop
 	docker rm golang_dev
 	docker rmi go_img
