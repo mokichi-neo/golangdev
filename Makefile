@@ -6,6 +6,9 @@ build:
 run:
 	docker run --name golang_dev -d -it -v $(CURDIR)/src/:/go/src/  go_img 
 
+start:
+	docker start golang_dev
+
 stop:
 	docker stop golang_dev
 
