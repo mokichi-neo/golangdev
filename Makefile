@@ -4,7 +4,7 @@ build:
 	docker build ./ -t go_img 
 
 run:
-	docker run --name golang_dev -d -it -v $(CURDIR)/src/:/go/src/  go_img 
+	docker run --name golang_dev -d -it -p 8080:8080 -v $(CURDIR)/src/:/go/src/  go_img 
 
 start:
 	docker start golang_dev
